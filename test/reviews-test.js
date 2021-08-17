@@ -114,7 +114,7 @@ describe('Reviews Component', () => {
 
   it('displays a review for when it is associated with the restaurant', () => {
     const store = createStore(manageRestaurant);
-    store.dispatch({type: 'ADD_RESTAURANT', text: 'LoKi'})
+    store.dispatch({type: 'ADD_RESTAURANT',   })
     let restaurantId = store.getState().restaurants[0].id
     store.dispatch({ type: 'ADD_REVIEW', review: { text: "Was great", restaurantId } })
     store.dispatch({ type: 'ADD_REVIEW', review: { text: "Was not great", restaurantId } })
